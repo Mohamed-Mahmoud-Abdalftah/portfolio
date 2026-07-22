@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Mohamed Mahmoud Abd Alftah — Senior Android &amp; POS Engineer</title>
-  <meta name="description" content="Senior Android Engineer specializing in POS, EMV, ISO 8583, Visa/Mastercard L3, Kotlin, Jetpack Compose. 9 years building bank-grade payment systems across MENA." />
+  <title>Mohamed Mahmoud Abd Alftah — Senior Android Engineer · Fintech &amp; Payment Systems</title>
+  <meta name="description" content="Senior Android Engineer building secure payment platforms for banks and fintech. 9 years · Kotlin · Compose · EMV · ISO 8583 · NFC · POS · L3 · 500K+ installs. Open to global fintech roles." />
   <meta name="author" content="Mohamed Mahmoud Abd Alftah" />
-  <meta name="keywords" content="Senior Android Engineer, Kotlin, Jetpack Compose, POS, EMV, ISO 8583, Payment Android Engineer, Embedded Android" />
+  <meta name="keywords" content="Senior Android Engineer, Kotlin, Jetpack Compose, Fintech, Payment Systems, EMV, ISO 8583, NFC, Android Security, POS, Clean Architecture, MVVM, MVI, Coroutines, Visa Mastercard L3, Terminal SDK, Banking, Merchant Apps, Embedded Android" />
   <meta name="theme-color" content="#030014" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sites.google.com/view/mohamed-abdel-fattah" />
+  <link rel="canonical" href="https://mohamed-mahmoud-abdalftah.github.io/portfolio/" />
 
-  <meta property="og:title" content="Mohamed Mahmoud — Senior Android &amp; POS Engineer" />
-  <meta property="og:description" content="9 years building production Android and card-present POS systems for banks and merchants across MENA." />
+  <meta property="og:title" content="Mohamed Mahmoud — Senior Android Engineer · Fintech &amp; Payments" />
+  <meta property="og:description" content="Secure payment platforms · EMV · ISO 8583 · POS · 500K+ installs · L3 delivery. Senior Android Engineer open to global fintech." />
   <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://sites.google.com/view/mohamed-abdel-fattah" />
+  <meta property="og:url" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohamed Mahmoud — Senior Android &amp; POS Engineer" />
+  <meta name="twitter:title" content="Mohamed Mahmoud — Senior Android Engineer · Fintech &amp; Payments" />
   <meta name="twitter:description" content="Senior Android Engineer · Payment Systems · EMV · ISO 8583 · L3" />
   <meta property="og:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/profile.png" />
   <meta property="og:image:width" content="768" />
@@ -33,14 +33,14 @@
     "@type": "Person",
     "name": "Mohamed Mahmoud Abd Alftah",
     "jobTitle": "Senior Android Engineer",
-    "description": "Senior Android Engineer specializing in POS and card-present payment systems.",
-    "url": "https://sites.google.com/view/mohamed-abdel-fattah",
+    "description": "Senior Android Engineer building secure payment platforms and scalable mobile systems for banks and fintech.",
+    "url": "https://mohamed-mahmoud-abdalftah.github.io/portfolio/",
     "email": "mailto:mohamed.m.abdalftah@gmail.com",
     "sameAs": [
       "https://github.com/Mohamed-Mahmoud-Abdalftah",
       "https://www.linkedin.com/in/mohamedmahmoud95/"
     ],
-    "knowsAbout": ["Android", "Kotlin", "Jetpack Compose", "EMV", "ISO 8583", "POS Systems", "Payment Systems", "NFC", "Clean Architecture"],
+    "knowsAbout": ["Android", "Kotlin", "Jetpack Compose", "Fintech", "Payment Systems", "EMV", "ISO 8583", "NFC", "POS", "Android Security", "Clean Architecture", "MVVM", "MVI"],
     "image": "https://mohamed-mahmoud-abdalftah.github.io/portfolio/profile.png",
     "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" }
   }
@@ -439,6 +439,18 @@
       font-style: normal;
       color: var(--purple);
     }
+    .hero__value {
+      margin: 0 0 1.25rem;
+      padding: .85rem 1rem;
+      font-size: .88rem;
+      line-height: 1.55;
+      color: var(--muted);
+      background: rgba(59,130,246,.06);
+      border: 1px solid rgba(59,130,246,.15);
+      border-radius: var(--radius-sm);
+      max-width: 36rem;
+    }
+    .hero__value strong { color: var(--text); font-weight: 600; }
     .hero__tags {
       display: flex;
       flex-wrap: wrap;
@@ -1620,8 +1632,31 @@
       font-weight: 800;
     }
 
+    .side-card, .write-card {
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color .25s, transform .25s var(--ease);
+    }
+    .side-card:hover, .write-card:hover {
+      border-color: rgba(139,92,246,.3);
+      transform: translateY(-3px);
+    }
+    .side-card__tag, .write-card__tag {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+    .side-card h3, .write-card h3 { margin: .4rem 0 .5rem; font-size: 1.05rem; }
+    .side-card p, .write-card p { margin: 0; font-size: .86rem; color: var(--muted); line-height: 1.55; }
+    .side-card code, .write-card code { font-family: var(--mono); font-size: .78rem; color: var(--emerald); background: rgba(52,211,153,.08); padding: .1rem .35rem; border-radius: 4px; }
+    .side-grid, .write-grid { display: grid; gap: .75rem; }
     @media (min-width: 768px) {
       .philosophy-grid { grid-template-columns: repeat(3, 1fr); }
+      .side-grid, .write-grid { grid-template-columns: repeat(2, 1fr); }
       .focus-grid { grid-template-columns: repeat(2, 1fr); }
       .github-grid { grid-template-columns: repeat(3, 1fr); }
       .hero__grid { grid-template-columns: 1.05fr .95fr; }
@@ -1655,6 +1690,8 @@
         <a href="#architecture">Architecture</a>
         <a href="#projects">Projects</a>
         <a href="#proof">Proof</a>
+        <a href="#side-projects">Side</a>
+        <a href="#writing">Writing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-sm btn--primary" href="https://drive.google.com/uc?export=download&amp;id=1Q5IzPAwzVtmt5xFxYbkQaBvT3yZMFzXb" target="_blank" rel="noopener">CV</a>
@@ -1680,6 +1717,8 @@
         <a href="#architecture">Architecture</a>
         <a href="#projects">Projects</a>
         <a href="#proof">Proof</a>
+        <a href="#side-projects">Side</a>
+        <a href="#writing">Writing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -1691,7 +1730,7 @@
       <a href="#about" data-nav="about"><svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>About</a>
       <a href="#experience" data-nav="experience"><svg viewBox="0 0 24 24"><path d="M20 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Work</a>
       <a href="#projects" data-nav="projects"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Projects</a>
-      <a href="#proof" data-nav="proof"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z"/></svg>Proof</a>
+      <a href="#side-projects" data-nav="side"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"/></svg>Side</a>
       <a href="#contact" data-nav="contact"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg>Contact</a>
     </div>
   </nav>
@@ -1704,6 +1743,8 @@
       <a href="#architecture">Architecture</a>
       <a href="#projects">Projects</a>
       <a href="#proof">Proof</a>
+      <a href="#side-projects">Side</a>
+      <a href="#writing">Writing</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -1716,8 +1757,9 @@
             Mohamed<br />Mahmoud<br />
             <span class="grad">Abd Alftah</span>
           </h1>
-          <p class="hero__subtitle">Senior Android Engineer building <em>payment systems that move real money.</em></p>
-          <p class="hero__role"><span class="typing" id="roleCycle" aria-live="polite">Payment Systems Engineer</span></p>
+          <p class="hero__subtitle">Building <em>secure payment platforms</em> and scalable mobile systems for banks and fintech.</p>
+          <p class="hero__value">End-to-end delivery from Android UI → EMV → device SDKs → ISO 8583 — with production apps at <strong>500K+ installs</strong> and <strong>Visa/Mastercard L3</strong> certification support.</p>
+          <p class="hero__role"><span class="typing" id="roleCycle" aria-live="polite">Senior Android Engineer</span></p>
           <div class="hero__tags" aria-label="Core expertise">
             <span>Android</span><span>Kotlin</span><span>Compose</span><span>EMV</span><span>ISO 8583</span><span>POS</span><span>L3</span><span>Security</span>
           </div>
@@ -1757,8 +1799,8 @@
               <img src="profile.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
             </div>
             <div class="avatar-card__meta">
-              <strong>Senior Android &amp; POS Engineer</strong>
-              <span>Cairo · Remote &amp; EU relocation</span>
+              <strong>Senior Android Engineer</strong>
+              <span>Fintech · POS · Cairo · Remote &amp; EU</span>
             </div>
           </div>
         </div>
@@ -1770,7 +1812,7 @@
       <div class="container">
         <span class="section__eyebrow">01 · About</span>
         <h2 class="section__title">Engineering depth.<br />Commercial impact.</h2>
-        <p class="section__desc">I work where Android, payment infrastructure, device hardware, and banking reliability meet.</p>
+        <p class="section__desc">Senior Android Engineer specializing in fintech, payment systems, POS terminals, and the architecture required to move real money safely at scale.</p>
         <div class="about-grid">
           <div class="about-text reveal">
             <p>I am a Senior Android Engineer with <strong>9 years of production experience</strong> delivering mobile and card-present POS systems for banks and merchants across MENA. My work spans Android platform engineering, payment protocols, device integrations, and the architecture required to keep financial flows secure and maintainable.</p>
@@ -1898,30 +1940,40 @@
           <button class="tab" type="button" role="tab" aria-selected="false" data-tab="arch">Architecture</button>
           <button class="tab" type="button" role="tab" aria-selected="false" data-tab="pay">Payments</button>
           <button class="tab" type="button" role="tab" aria-selected="false" data-tab="sec">Security</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="hw">Hardware</button>
           <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tools">Tools</button>
         </div>
         <div class="tab-panel is-active reveal" id="tab-android" role="tabpanel">
           <div class="skills-grid">
-            <div class="skill-card is-visible"><span class="skill-card__cat">Languages</span><p>Kotlin, Java</p><div class="skill-bar" aria-hidden="true"><span style="width:95%"></span></div></div>
-            <div class="skill-card is-visible"><span class="skill-card__cat">UI &amp; Framework</span><p>Jetpack Compose, XML, ViewModel, Navigation, Paging, Room</p><div class="skill-bar" aria-hidden="true"><span style="width:92%"></span></div></div>
-            <div class="skill-card is-visible"><span class="skill-card__cat">Async &amp; DI</span><p>Coroutines, Flow, Hilt, lifecycle-aware state</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Core</span><p>Kotlin, Java, Jetpack Compose, XML Views</p><div class="skill-bar" aria-hidden="true"><span style="width:95%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Async &amp; State</span><p>Coroutines, Flow, ViewModel, lifecycle-aware state</p><div class="skill-bar" aria-hidden="true"><span style="width:92%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Platform</span><p>Architecture Components, Navigation, Room, Paging, Hilt, modularization</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
           </div>
         </div>
         <div class="tab-panel reveal" id="tab-arch" role="tabpanel">
           <div class="skills-grid">
-            <div class="skill-card is-visible"><span class="skill-card__cat">Patterns</span><p>Clean Architecture, MVVM, Repository, Use Cases, SOLID</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
-            <div class="skill-card is-visible"><span class="skill-card__cat">Platform</span><p>Multi-flavor builds, modularization, SDK boundaries</p><div class="skill-bar" aria-hidden="true"><span style="width:88%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Patterns</span><p>Clean Architecture, MVVM, MVI, Domain-Driven Design, SOLID</p><div class="skill-bar" aria-hidden="true"><span style="width:92%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Platform design</span><p>Multi-flavor builds, SDK boundaries, use cases, repository contracts</p><div class="skill-bar" aria-hidden="true"><span style="width:88%"></span></div></div>
           </div>
         </div>
         <div class="tab-panel reveal" id="tab-pay" role="tabpanel">
           <div class="skills-grid">
-            <div class="skill-card is-visible"><span class="skill-card__cat">Protocols</span><p>EMV contact/contactless, ISO 8583 (87/93), jPOS, InstaPay</p><div class="skill-bar" aria-hidden="true"><span style="width:96%"></span></div></div>
-            <div class="skill-card is-visible"><span class="skill-card__cat">Terminal</span><p>POS SDK integration, NFC, Visa/Mastercard L3 readiness</p><div class="skill-bar" aria-hidden="true"><span style="width:94%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Protocols</span><p>EMV contact/contactless, ISO 8583 (1987/1993), jPOS, InstaPay</p><div class="skill-bar" aria-hidden="true"><span style="width:96%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Terminal &amp; NFC</span><p>NFC payments, contactless flows, POS SDK integration, Visa/Mastercard L3 readiness</p><div class="skill-bar" aria-hidden="true"><span style="width:94%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Certification</span><p>Scheme audit support, EMV kernel integration, payment certification workflows</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
           </div>
         </div>
         <div class="tab-panel reveal" id="tab-sec" role="tabpanel">
           <div class="skills-grid">
-            <div class="skill-card is-visible"><span class="skill-card__cat">Hardening</span><p>R8/ProGuard, root detection, SSL pinning, secure key injection</p><div class="skill-bar" aria-hidden="true"><span style="width:87%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Platform security</span><p>Android Keystore, secure storage, encryption, tokenization patterns</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Hardening</span><p>Key injection lifecycle, R8/ProGuard, root detection, SSL pinning</p><div class="skill-bar" aria-hidden="true"><span style="width:87%"></span></div></div>
+          </div>
+        </div>
+        <div class="tab-panel reveal" id="tab-hw" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">POS hardware</span><p>Android POS terminals, card readers, embedded payment devices</p><div class="skill-bar" aria-hidden="true"><span style="width:93%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Peripherals</span><p>Receipt printers, TMS fleet ops, device SDK variance handling</p><div class="skill-bar" aria-hidden="true"><span style="width:88%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Integrations</span><p>MDB vending integration, REST + ISO host messaging on terminal fleets</p><div class="skill-bar" aria-hidden="true"><span style="width:85%"></span></div></div>
           </div>
         </div>
         <div class="tab-panel reveal" id="tab-tools" role="tabpanel">
@@ -2010,6 +2062,7 @@
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Problem<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Legacy Java codebase with fragile payment paths, inconsistent EMV behavior, and no clear modular boundaries for multi-bank/device variants.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Business goal<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Ship a maintainable, scheme-ready POS product supporting Visa/Mastercard L3 certification, InstaPay, and reliable production releases for CIB merchants.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Architecture<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Clean Architecture with multi-flavor modules separating UI, domain use cases, EMV/ISO 8583 adapters, and device SDK integrations. Java → Kotlin migration with coroutine-based transaction orchestration.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Implementation<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p><strong>Stack:</strong> Kotlin, Coroutines/Flow, Hilt, multi-flavor Gradle, POS device SDKs, jPOS/ISO 8583 adapters.<br /><strong>Decisions:</strong> Repository pattern isolates device variance; explicit transaction state machine; flavor-driven bank configuration; certification-friendly test hooks on EMV paths.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Technical decisions<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Isolated payment domain from device variance via repository pattern; standardized transaction state machine; ISO 8583 (1987/1993) encoding behind testable interfaces; flavor-driven configuration for bank-specific flows.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Challenges<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Certification-grade EMV edge cases, legacy migration without production downtime, coordinating POS SDK + host message formats under L3 audit constraints.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Result &amp; impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Visa/Mastercard L3 delivery support, InstaPay and contact/contactless flows in production, maintainable bank release cadence, stabilized platform for ongoing merchant rollout.</p></div></div></div>
@@ -2027,6 +2080,9 @@
             </div>
             <div class="case__sections">
               <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Rebuilt Merchant App on Compose + Hilt; owned Payment SDK and PayButton SDK for partner integrations across MENA merchant brands.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Problem<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Each merchant brand needed secure NFC/contactless payment flows without rebuilding EMV logic per partner — while maintaining independent release cadences and Play Store compliance.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Architecture<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>SDK-first design: shared payment domain module consumed by Compose merchant shells. PayButton SDK exposes a minimal integration surface; Payment SDK handles EMV/NFC orchestration behind stable contracts.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Implementation<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p><strong>Stack:</strong> Jetpack Compose, Hilt, Coroutines/Flow, Retrofit, Play Store release pipelines.<br /><strong>Decisions:</strong> Compose for merchant UX velocity; SDK boundaries for partner onboarding; shared security hardening (pinning, root checks) across all white-label builds.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Business goal<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Consistent, secure payment capabilities for merchants and partners without re-implementing EMV/NFC flows per brand.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Reusable integration paths; live apps at 500K+, 10K+, and 5K+ installs; reduced partner defect cycles on live payment paths.</p></div></div></div>
             </div>
@@ -2044,6 +2100,8 @@
             </div>
             <div class="case__sections">
               <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Android POS acquiring integration — EMV processing and ISO 8583 messaging aligned with GIM host requirements for embedded terminals.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Problem<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Embedded Android POS hardware required reliable card-present acquiring with host-specific ISO 8583 field mappings and EMV kernel behavior on constrained devices.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Implementation<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Kotlin transaction engine, EMV kernel integration, ISO 8583 message builder for GIM host, device SDK bridge for card reader hardware on embedded Android POS.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Result<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Production card-present transaction processing on embedded Android POS hardware.</p></div></div></div>
             </div>
           </article>
@@ -2055,6 +2113,8 @@
             </div>
             <div class="case__sections">
               <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Secure key injection tooling and TMS Agent app for remote configuration and fleet control — preserving security boundaries across POS fleets.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Problem<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>POS fleets need auditable key injection and remote terminal management without exposing sensitive material or breaking scheme security requirements.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Implementation<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>KeyInjector app for secure key lifecycle on terminals; TMS Agent for remote fleet configuration — Android Keystore patterns, controlled injection workflows, and operational tooling for field teams.</p></div></div></div>
               <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Centralized sensitive fleet operations with auditable key handling workflows.</p></div></div></div>
             </div>
           </article>
@@ -2075,8 +2135,8 @@
           <div class="achievement"><span class="achievement__icon">POS</span><div><b>Bank-grade systems</b><span style="display:block;font-size:.78rem;color:var(--muted)">CIB POS · GIM · KeyInjector · SDKs</span></div></div>
         </div>
         <div class="metrics reveal">
-          <div class="metric"><span class="metric__val" data-count="9" data-suffix="+">0</span><span class="metric__lbl">Years production Android delivery</span></div>
-          <div class="metric"><span class="metric__val" data-count="500" data-suffix="K+">0</span><span class="metric__lbl">Orange Merchant Play Store installs</span></div>
+          <div class="metric"><span class="metric__val" data-count="9" data-suffix="+">9+</span><span class="metric__lbl">Years production Android delivery</span></div>
+          <div class="metric"><span class="metric__val" data-count="500" data-suffix="K+">500K+</span><span class="metric__lbl">Orange Merchant Play Store installs</span></div>
           <div class="metric"><span class="metric__val">Visa + MC</span><span class="metric__lbl">Successful L3 certification delivery support</span></div>
           <div class="metric"><span class="metric__val">3</span><span class="metric__lbl">Live merchant apps on Play Store (Orange, ADCB, QNB)</span></div>
           <div class="metric"><span class="metric__val">MENA</span><span class="metric__lbl">Bank &amp; merchant payment systems across the region</span></div>
@@ -2085,10 +2145,78 @@
       </div>
     </section>
 
+    <!-- SIDE PROJECTS -->
+    <section class="section" id="side-projects">
+      <div class="container">
+        <span class="section__eyebrow">07 · Side projects</span>
+        <h2 class="section__title">Product engineering<br />outside payments.</h2>
+        <p class="section__desc">Side projects show end-to-end product ownership — architecture, gameplay systems, monetization, and mobile deployment — beyond enterprise Android work.</p>
+        <article class="side-card reveal" style="margin-bottom:1rem">
+          <span class="focus-card__label">Unity · Android · F2P</span>
+          <h3>Kingdom Defense — Tower Defense Game</h3>
+          <p>Portrait tower-defense built on <strong>Unity 6 (URP 2D)</strong> targeting Android at 1080×1920 / 60 FPS. Full mobile game architecture: bootstrap pipeline, modular assemblies, content factory (30 levels), and production-oriented F2P systems.</p>
+        </article>
+        <div class="side-grid reveal">
+          <article class="side-card">
+            <span class="focus-card__label">Architecture</span>
+            <h3>Systems &amp; structure</h3>
+            <p>Clean module boundaries via assembly definitions; <code>GameBootstrap</code> entry pipeline; object pooling; Addressables with Resources fallback; EditMode + PlayMode test coverage.</p>
+          </article>
+          <article class="side-card">
+            <span class="focus-card__label">Gameplay</span>
+            <h3>Core loops</h3>
+            <p>Tower placement &amp; upgrades, wave spawning, path following, damage system, castle defense, 30 procedurally configured levels via <code>GameContentFactory</code>.</p>
+          </article>
+          <article class="side-card">
+            <span class="focus-card__label">Monetization</span>
+            <h3>F2P economy</h3>
+            <p>IAP catalog, rewarded ads integration, gacha/economy schema, battle pass hooks, shop systems — designed for sustainable mobile monetization without breaking core gameplay.</p>
+          </article>
+          <article class="side-card">
+            <span class="focus-card__label">Performance</span>
+            <h3>Mobile deployment</h3>
+            <p>IL2CPP ARM64 builds, FPS overlay &amp; GC helpers, URP 2D optimization, portrait orientation lock — store readiness ~82% per internal production report.</p>
+          </article>
+        </div>
+        <p class="section__desc reveal" style="margin-top:1.25rem;font-size:.84rem">Demo build and store listing planned — codebase is private; architecture and systems documented in-repo. Shows product mindset alongside bank-grade Android delivery.</p>
+      </div>
+    </section>
+
+    <!-- WRITING -->
+    <section class="section" id="writing">
+      <div class="container">
+        <span class="section__eyebrow">08 · Technical writing</span>
+        <h2 class="section__title">Engineering notes<br />(in progress).</h2>
+        <p class="section__desc">Planned articles on payment engineering and Android architecture — honest placeholders until published. Recruiters: depth is demonstrated in case studies and production delivery above.</p>
+        <div class="write-grid reveal">
+          <article class="write-card">
+            <span class="focus-card__label">Planned</span>
+            <h3>EMV contactless explained for Android engineers</h3>
+            <p>Kernel flows, CVM decisions, and what L3 certification actually tests on a POS platform — from someone who shipped it.</p>
+          </article>
+          <article class="write-card">
+            <span class="focus-card__label">Planned</span>
+            <h3>ISO 8583 on Android POS terminals</h3>
+            <p>Message building, field mappings, secure channels, and keeping host integration testable behind Clean Architecture boundaries.</p>
+          </article>
+          <article class="write-card">
+            <span class="focus-card__label">Planned</span>
+            <h3>Android security for payment apps</h3>
+            <p>Keystore, key injection, root detection, SSL pinning, and R8 hardening as release requirements — not afterthoughts.</p>
+          </article>
+          <article class="write-card">
+            <span class="focus-card__label">Planned</span>
+            <h3>Clean Architecture lessons from multi-flavor POS</h3>
+            <p>How device SDK variance and bank-specific flavors shape module boundaries in production payment software.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- GITHUB -->
     <section class="section" id="github">
       <div class="container">
-        <span class="section__eyebrow">07 · GitHub</span>
+        <span class="section__eyebrow">09 · GitHub</span>
         <h2 class="section__title">Code &amp; craft.</h2>
         <p class="section__desc">Most payment and banking work is private — public activity reflects personal projects and engineering experiments.</p>
         <div class="github-grid reveal">
@@ -2106,7 +2234,7 @@
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container">
-        <span class="section__eyebrow">08 · FAQ</span>
+        <span class="section__eyebrow">10 · FAQ</span>
         <h2 class="section__title">Recruiter questions.</h2>
         <p class="section__desc">Straight answers — no generic pitch.</p>
         <div class="faq-list reveal">
@@ -2123,7 +2251,7 @@
     <section class="section" id="contact">
       <div class="container contact-grid">
         <div class="reveal">
-          <span class="section__eyebrow">09 · Contact</span>
+          <span class="section__eyebrow">11 · Contact</span>
           <h2 class="contact-title">Building serious<br />Android systems?<br /><span>Let's talk.</span></h2>
           <p class="contact-note">Open to senior Android, platform, POS, and payment-engineering roles — remote or relocation to Europe.</p>
           <div class="hero__actions">
@@ -2288,11 +2416,11 @@
       /* Typewriter roles */
       const roleEl = document.getElementById("roleCycle");
       const roles = matchMedia("(max-width: 767px)").matches
-        ? ["Payment Systems", "EMV · ISO 8583", "POS Engineer", "L3 Delivery"]
+        ? ["Senior Android Engineer", "EMV · ISO 8583", "Fintech · POS", "L3 Delivery"]
         : [
-            "Payment Systems Engineer",
-            "EMV & ISO 8583 Specialist",
-            "POS & Embedded Android",
+            "Senior Android Engineer",
+            "Fintech & Payment Systems",
+            "EMV · ISO 8583 · NFC",
             "Visa/Mastercard L3 Delivery"
           ];
       if (roleEl && !reduced) {
