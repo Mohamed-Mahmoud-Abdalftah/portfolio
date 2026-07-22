@@ -692,7 +692,7 @@
       margin: 0;
       font-size: clamp(.95rem, 3vw, 1.05rem);
       font-weight: 700;
-      flex: 1 1 12rem;
+      flex: 1 1 auto;
       min-width: 0;
       line-height: 1.35;
     }
@@ -759,7 +759,7 @@
       transition: grid-template-rows .35s var(--ease);
     }
     .timeline-item.is-open .timeline-item__body { grid-template-rows: 1fr; }
-    .timeline-item__inner { overflow: hidden; }
+    .timeline-item__inner { overflow: hidden; min-height: 0; }
 
     /* ── Skills ── */
     .skills-grid {
@@ -1173,6 +1173,21 @@
         font-size: .98rem;
         line-height: 1.35;
         padding-right: 1.75rem;
+        flex: none;
+      }
+      .timeline-item__head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .4rem;
+      }
+      .timeline-item__body {
+        display: none;
+      }
+      .timeline-item.is-open .timeline-item__body {
+        display: block;
+      }
+      .timeline-item:not(.is-open) .timeline-item__toggle {
+        padding-bottom: 1rem;
       }
       .timeline-item__date {
         font-size: .7rem;
@@ -1196,6 +1211,10 @@
         line-height: 1.5;
       }
       .co-badge { width: 36px; height: 36px; font-size: .65rem; }
+      /* one sticky bar on mobile — hide duplicate CTA */
+      .mobile-cta { display: none !important; }
+      .fab { bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
+      .footer { padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
     }
 
     @media (max-width: 359px) {
