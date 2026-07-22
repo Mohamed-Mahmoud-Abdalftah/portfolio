@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mohamed Mahmoud Abd Alftah — Senior Android &amp; POS Engineer</title>
+  <meta name="description" content="Senior Android Engineer specializing in POS, EMV, ISO 8583, Visa/Mastercard L3, Kotlin, Jetpack Compose. 9 years building bank-grade payment systems across MENA." />
+  <meta name="author" content="Mohamed Mahmoud Abd Alftah" />
+  <meta name="keywords" content="Senior Android Engineer, Kotlin, Jetpack Compose, POS, EMV, ISO 8583, Payment Android Engineer, Embedded Android" />
+  <meta name="theme-color" content="#030014" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sites.google.com/view/mohamed-abdel-fattah" />
+
+  <meta property="og:title" content="Mohamed Mahmoud — Senior Android &amp; POS Engineer" />
+  <meta property="og:description" content="9 years building production Android and card-present POS systems for banks and merchants across MENA." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://sites.google.com/view/mohamed-abdel-fattah" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohamed Mahmoud — Senior Android &amp; POS Engineer" />
+  <meta name="twitter:description" content="Senior Android Engineer · Payment Systems · EMV · ISO 8583 · L3" />
+  <meta property="og:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/og.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/og.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohamed Mahmoud Abd Alftah",
+    "jobTitle": "Senior Android Engineer",
+    "description": "Senior Android Engineer specializing in POS and card-present payment systems.",
+    "url": "https://sites.google.com/view/mohamed-abdel-fattah",
+    "email": "mailto:mohamed.m.abdalftah@gmail.com",
+    "sameAs": [
+      "https://github.com/Mohamed-Mahmoud-Abdalftah",
+      "https://www.linkedin.com/in/mohamedmahmoud95/"
+    ],
+    "knowsAbout": ["Android", "Kotlin", "Jetpack Compose", "EMV", "ISO 8583", "POS Systems", "Payment Systems", "NFC", "Clean Architecture"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Mohamed Mahmoud Abd Alftah",
+      "jobTitle": "Senior Android Engineer"
+    },
+    "description": "Portfolio of a Senior Android Engineer specializing in POS and payment systems."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #030014;
+      --bg-2: #0a0820;
+      --surface: rgba(255,255,255,.04);
+      --surface-hover: rgba(255,255,255,.07);
+      --border: rgba(255,255,255,.08);
+      --border-strong: rgba(255,255,255,.14);
+      --text: #f4f4f5;
+      --muted: #9494ab;
+      --blue: #3b82f6;
+      --purple: #8b5cf6;
+      --emerald: #34d399;
+      --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #34d399 100%);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --max: 1120px;
+      --nav-h: 64px;
+      --bottom-nav-h: 0px;
+      --font: "Plus Jakarta Sans", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: clip;
+      min-height: 100dvh;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    main, .hero__grid > *, .container { min-width: 0; max-width: 100%; }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    ul { margin: 0; padding: 0; list-style: none; }
+
+    :focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    ::selection { background: rgba(59,130,246,.35); color: #fff; }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    /* ── Background ── */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .bg__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent);
+    }
+    .bg__aurora {
+      position: absolute;
+      width: 140%;
+      height: 70%;
+      top: -20%;
+      left: -20%;
+      background:
+        radial-gradient(ellipse at 20% 40%, rgba(59,130,246,.18), transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(139,92,246,.14), transparent 45%),
+        radial-gradient(ellipse at 60% 80%, rgba(52,211,153,.08), transparent 40%);
+      animation: aurora 12s ease-in-out infinite alternate;
+    }
+    @keyframes aurora {
+      from { transform: translate3d(-2%, 0, 0) scale(1); }
+      to { transform: translate3d(2%, 2%, 0) scale(1.05); }
+    }
+    .bg__glow {
+      position: absolute;
+      width: min(500px, 80vw);
+      height: min(500px, 80vw);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,.12), transparent 70%);
+      top: 10%;
+      right: -10%;
+      filter: blur(40px);
+    }
+    .bg__cursor {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,92,246,.14), transparent 70%);
+      pointer-events: none;
+      transform: translate3d(-50%, -50%, 0);
+      filter: blur(48px);
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    html.motion .bg__cursor { opacity: 1; }
+    .bg__particles {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(59,130,246,.35) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(139,92,246,.3) 1px, transparent 1px),
+        radial-gradient(circle at 55% 75%, rgba(52,211,153,.25) 1px, transparent 1px);
+      background-size: 120px 120px, 180px 180px, 240px 240px;
+      animation: drift 24s linear infinite;
+      opacity: .35;
+    }
+    @keyframes drift {
+      to { background-position: 120px 120px, -180px 180px, 240px -240px; }
+    }
+
+    /* ── Progress ── */
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0;
+      z-index: 200;
+      background: var(--gradient);
+    }
+
+    /* ── Header / Nav ── */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: background .3s var(--ease), border-color .3s var(--ease), backdrop-filter .3s;
+    }
+    .header.is-scrolled {
+      background: rgba(3,0,20,.75);
+      backdrop-filter: blur(16px) saturate(1.4);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4);
+      border-color: var(--border);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -.03em;
+    }
+    .logo span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: .25rem;
+    }
+    .nav-desktop a {
+      padding: .45rem .75rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--muted);
+      border-radius: 8px;
+      transition: color .2s, background .2s;
+    }
+    .nav-desktop a:hover,
+    .nav-desktop a.is-active {
+      color: var(--text);
+      background: var(--surface);
+    }
+    .nav-desktop .btn-sm {
+      margin-left: .5rem;
+    }
+    .menu-btn {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .menu-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* Mobile drawer */
+    .drawer {
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+      background: rgba(3,0,20,.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s, visibility .25s;
+    }
+    .drawer.is-open { opacity: 1; visibility: visible; }
+    .drawer__panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(320px, 88vw);
+      height: 100%;
+      background: var(--bg-2);
+      border-left: 1px solid var(--border);
+      padding: 1.25rem;
+      transform: translateX(100%);
+      transition: transform .3s var(--ease);
+      overflow-y: auto;
+    }
+    .drawer.is-open .drawer__panel { transform: none; }
+    .drawer__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .drawer__links { display: grid; gap: .25rem; }
+    .drawer__links a {
+      display: block;
+      padding: .85rem 1rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      color: var(--muted);
+    }
+    .drawer__links a:hover { background: var(--surface); color: var(--text); }
+
+    /* Bottom nav mobile */
+    .bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      height: calc(56px + env(safe-area-inset-bottom, 0px));
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      background: rgba(3,0,20,.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+    }
+    .bottom-nav__inner {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      height: 56px;
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+    .bottom-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: .62rem;
+      font-weight: 600;
+      color: var(--muted);
+      min-height: 44px;
+    }
+    .bottom-nav a.is-active { color: var(--blue); }
+    .bottom-nav svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      min-height: 44px;
+      padding: 0 1.15rem;
+      font-size: .88rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      transition: transform .2s var(--ease), box-shadow .2s, background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(.98); }
+    .btn--primary {
+      background: var(--gradient);
+      color: #fff;
+      box-shadow: 0 0 24px rgba(59,130,246,.25);
+    }
+    .btn--primary:hover { box-shadow: 0 0 32px rgba(59,130,246,.4); }
+    .btn--ghost {
+      background: var(--surface);
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn--ghost:hover { background: var(--surface-hover); border-color: var(--border-strong); }
+    .btn-sm { min-height: 36px; padding: 0 .85rem; font-size: .78rem; }
+    .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; flex-shrink: 0; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: calc(var(--nav-h) + 2.5rem) 0 3rem;
+      min-height: auto;
+    }
+    .hero__grid {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .35rem .75rem;
+      margin-bottom: 1.25rem;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      background: rgba(52,211,153,.08);
+      border: 1px solid rgba(52,211,153,.2);
+      border-radius: 999px;
+    }
+    .badge__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse { 50% { opacity: .5; } }
+
+    .hero__title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.55rem, 6.5vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      hyphens: auto;
+    }
+    .hero__title .grad {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero__subtitle {
+      margin: 0 0 .75rem;
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      font-weight: 600;
+      color: var(--text);
+      max-width: 32rem;
+      overflow-wrap: anywhere;
+    }
+    .hero__subtitle em {
+      font-style: normal;
+      color: var(--purple);
+    }
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin: 0 0 1.5rem;
+      max-width: 36rem;
+    }
+    .hero__tags span {
+      padding: .28rem .55rem;
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      line-height: 1.3;
+    }
+    .hero__role {
+      display: block;
+      margin-top: .35rem;
+      font-size: clamp(.85rem, 3.2vw, 1.15rem);
+      font-weight: 600;
+      color: var(--emerald);
+      min-height: 1.4em;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+    }
+    .hero__aside {
+      display: grid;
+      gap: 1rem;
+    }
+    .avatar-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .avatar {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      background: var(--gradient);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    .avatar-card__meta strong { display: block; font-size: .95rem; }
+    .avatar-card__meta span { font-size: .78rem; color: var(--muted); }
+
+    .code-card {
+      padding: 1rem;
+      background: rgba(0,0,0,.35);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .15s var(--ease);
+      will-change: transform;
+    }
+    .code-card__bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: .85rem;
+      padding-bottom: .65rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .code-card__bar i { width: 8px; height: 8px; border-radius: 50%; }
+    .code-card__bar i:nth-child(1) { background: #ff5f57; }
+    .code-card__bar i:nth-child(2) { background: #febc2e; }
+    .code-card__bar i:nth-child(3) { background: #28c840; }
+    .code-card__bar span {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: .65rem;
+      color: var(--muted);
+    }
+    .code-card pre {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: clamp(.62rem, 2.8vw, .75rem);
+      line-height: 1.75;
+      color: #a8b0c8;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .code-card .kw { color: #c792ea; }
+    .code-card .fn { color: #82aaff; }
+    .code-card .ty { color: #ffcb6b; }
+    .code-card .cm { color: #546176; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .5rem;
+    }
+    .stat {
+      padding: .75rem .5rem;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      min-width: 0;
+    }
+    .stat__val {
+      display: block;
+      font-size: clamp(.95rem, 3.5vw, 1.15rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .stat__lbl {
+      display: block;
+      margin-top: .15rem;
+      font-size: clamp(.58rem, 2.2vw, .68rem);
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    /* ── Sections ── */
+    .section {
+      padding: 4rem 0;
+      scroll-margin-top: calc(var(--nav-h) + 1rem);
+    }
+    .section + .section { border-top: 1px solid var(--border); }
+    .section__eyebrow {
+      display: block;
+      margin-bottom: .5rem;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .section__title {
+      margin: 0 0 .75rem;
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+    .section__desc {
+      margin: 0 0 2rem;
+      max-width: 36rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* ── About ── */
+    .about-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    .about-text p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .about-text strong { color: var(--text); font-weight: 600; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: 1rem;
+    }
+    .tag {
+      padding: .3rem .65rem;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--purple);
+      background: rgba(139,92,246,.1);
+      border: 1px solid rgba(139,92,246,.2);
+      border-radius: 999px;
+    }
+    .highlights { display: grid; gap: .5rem; }
+    .highlight {
+      display: flex;
+      gap: .85rem;
+      align-items: flex-start;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color .2s, background .2s;
+    }
+    .highlight:hover { border-color: var(--border-strong); background: var(--surface-hover); }
+    .highlight__num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--emerald);
+      background: rgba(52,211,153,.1);
+      border-radius: 8px;
+    }
+    .highlight b { display: block; font-size: .88rem; margin-bottom: .15rem; }
+    .highlight span { font-size: .78rem; color: var(--muted); line-height: 1.45; }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--blue), var(--purple), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      padding: 0 0 2rem 1.75rem;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: .35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 12px rgba(59,130,246,.5);
+    }
+    .timeline-item__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .5rem;
+      margin-bottom: .35rem;
+    }
+    .timeline-item h3 {
+      margin: 0;
+      font-size: clamp(.95rem, 3vw, 1.05rem);
+      font-weight: 700;
+      flex: 1 1 12rem;
+      min-width: 0;
+      line-height: 1.35;
+    }
+    .timeline-item__date {
+      font-size: .78rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .timeline-item__co {
+      margin: 0 0 .75rem;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .timeline-item ul {
+      padding-left: 1.1rem;
+      list-style: disc;
+    }
+    .timeline-item li {
+      margin-bottom: .45rem;
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .timeline-item li strong { color: var(--text); font-weight: 600; }
+    .timeline-item__tech {
+      margin-top: .75rem;
+      padding: .5rem .75rem;
+      font-size: .72rem;
+      color: var(--blue);
+      background: rgba(59,130,246,.08);
+      border: 1px solid rgba(59,130,246,.15);
+      border-radius: 8px;
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .timeline-item__toggle {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .75rem;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
+    .timeline-item__toggle .timeline-item__head {
+      margin-bottom: 0;
+      flex: 1;
+    }
+    .timeline-item__toggle svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 2;
+      transition: transform .25s var(--ease);
+    }
+    .timeline-item.is-open .timeline-item__toggle svg { transform: rotate(180deg); }
+    .timeline-item__body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s var(--ease);
+    }
+    .timeline-item.is-open .timeline-item__body { grid-template-rows: 1fr; }
+    .timeline-item__inner { overflow: hidden; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      gap: .75rem;
+      grid-template-columns: 1fr;
+    }
+    .skill-card {
+      padding: 1.15rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: transform .25s var(--ease), border-color .25s;
+    }
+    .skill-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(59,130,246,.3);
+    }
+    .skill-card__cat {
+      display: block;
+      margin-bottom: .35rem;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .skill-card p {
+      margin: 0 0 .65rem;
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .skill-bar {
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      overflow: hidden;
+    }
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--gradient);
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 1s var(--ease);
+    }
+    html.motion .skill-card.is-visible .skill-bar span { transform: scaleX(1); }
+
+    /* ── Architecture ── */
+    .arch-grid {
+      display: grid;
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+    .arch-card {
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color .25s;
+    }
+    .arch-card:hover { border-color: rgba(52,211,153,.3); }
+    .arch-card__num {
+      font-family: var(--mono);
+      font-size: .65rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+    .arch-card h3 {
+      margin: .75rem 0 .4rem;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+    .arch-card p {
+      margin: 0;
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .4rem;
+      padding: 1rem;
+      background: rgba(0,0,0,.25);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .flow__node {
+      padding: .5rem .7rem;
+      font-size: .68rem;
+      font-weight: 700;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .flow + .flow { margin-top: .75rem; }
+    .flow__label {
+      width: 100%;
+      margin-bottom: .35rem;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+    .flow__arrow { color: var(--purple); font-size: .75rem; }
+
+    /* ── Projects ── */
+    .projects { display: grid; gap: 1rem; }
+    .project {
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform .3s var(--ease), border-color .3s, box-shadow .3s;
+    }
+    .project:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139,92,246,.35);
+      box-shadow: 0 16px 48px rgba(0,0,0,.25);
+    }
+    .project__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .5rem;
+      margin-bottom: 1rem;
+    }
+    .project h3 {
+      margin: 0;
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 700;
+    }
+    .project__type {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--emerald);
+    }
+    .project__grid {
+      display: grid;
+      gap: .75rem;
+    }
+    .project__block {
+      padding-top: .75rem;
+      border-top: 1px solid var(--border);
+    }
+    .project__block strong {
+      display: block;
+      margin-bottom: .3rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .project__block p {
+      margin: 0;
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .project__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .85rem;
+    }
+    .project__links a {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .project__links a:hover { text-decoration: underline; }
+
+    /* ── Proof / Metrics ── */
+    .metrics {
+      display: grid;
+      gap: .75rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .metric {
+      padding: 1.25rem 1rem;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      min-width: 0;
+    }
+    .metric__val {
+      display: block;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .metric__lbl {
+      display: block;
+      margin-top: .35rem;
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    .contact-title {
+      margin: 0 0 1rem;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.05;
+    }
+    .contact-title span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .contact-note {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: .92rem;
+      max-width: 28rem;
+    }
+    .contact-cards { display: grid; gap: .5rem; }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      padding: .85rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color .2s, background .2s;
+    }
+    .contact-card:hover { border-color: var(--border-strong); background: var(--surface-hover); }
+    .contact-card__icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(59,130,246,.1);
+      color: var(--blue);
+      font-size: .75rem;
+      font-weight: 800;
+    }
+    .contact-card__label {
+      display: block;
+      font-size: .68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+    .contact-card__val {
+      font-size: .88rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 2rem 0 calc(2rem + var(--bottom-nav-h));
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .78rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .5rem;
+    }
+
+    .fab {
+      position: fixed;
+      right: 1rem;
+      bottom: calc(1rem + var(--bottom-nav-h));
+      z-index: 80;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+      transition: transform .2s;
+    }
+    .fab:hover { transform: scale(1.06); }
+    .fab svg { width: 24px; height: 24px; fill: currentColor; }
+
+    /* ── Mobile sticky CTA ── */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px));
+      z-index: 90;
+      padding: .5rem 1rem;
+      background: rgba(3,0,20,.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      transform: translateY(110%);
+      transition: transform .35s var(--ease);
+    }
+    .mobile-cta.is-visible { transform: translateY(0); }
+    .mobile-cta__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .5rem;
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+    .mobile-cta .btn { width: 100%; min-height: 40px; font-size: .78rem; padding: 0 .75rem; }
+
+    /* ── Reveal (content always visible) ── */
+    .reveal { opacity: 1; transform: none; }
+    html.motion .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease);
+    }
+    html.motion .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Desktop ── */
+    @media (min-width: 768px) {
+      .nav-desktop { display: flex; }
+      .menu-btn { display: none; }
+      .hero { padding-top: calc(var(--nav-h) + 4rem); padding-bottom: 4rem; }
+      .hero__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+      .hero__actions .btn { width: auto; }
+      .about-grid { grid-template-columns: 1.2fr .8fr; gap: 3rem; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .arch-grid { grid-template-columns: repeat(3, 1fr); }
+      .project__grid { grid-template-columns: repeat(3, 1fr); }
+      .metrics { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { grid-template-columns: 1fr 1fr; align-items: end; }
+      .section { padding: 5rem 0; }
+    }
+
+    @media (min-width: 1024px) {
+      .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ── Mobile bottom nav ── */
+    @media (max-width: 767px) {
+      :root { --bottom-nav-h: 56px; }
+      .bottom-nav { display: block; }
+      .mobile-cta { display: block; }
+      .hero { padding-top: calc(var(--nav-h) + 1.75rem); }
+      .hero__title { font-size: clamp(1.45rem, 8.5vw, 2.15rem); }
+      .hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .hero__actions .btn { width: 100%; white-space: normal; }
+      .fab { bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px)); }
+      .footer { padding-bottom: calc(7.5rem + env(safe-area-inset-bottom, 0px)); }
+      .section { scroll-margin-top: calc(var(--nav-h) + .5rem); padding: 3rem 0; }
+      .timeline-item__head { flex-direction: column; align-items: flex-start; }
+      .avatar-card__meta strong { font-size: .88rem; }
+
+      /* Experience → cards on mobile (Google Sites / narrow iframe) */
+      .timeline::before,
+      .timeline-item::before { display: none; }
+      .timeline-item {
+        padding: 0;
+        margin-bottom: .75rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .timeline-item__toggle {
+        padding: 1rem 1rem .65rem;
+        position: relative;
+      }
+      .timeline-item.is-open .timeline-item__toggle {
+        border-bottom: 1px solid var(--border);
+      }
+      .timeline-item__toggle svg {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+      .timeline-item h3 {
+        font-size: .98rem;
+        line-height: 1.35;
+        padding-right: 1.75rem;
+      }
+      .timeline-item__date {
+        font-size: .7rem;
+        padding: .22rem .5rem;
+        background: rgba(255,255,255,.05);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+      .timeline-item__inner { padding: .85rem 1rem 1rem; }
+      .timeline-item__co { font-size: .8rem; margin-bottom: .5rem; }
+      .timeline-item li {
+        font-size: .84rem;
+        line-height: 1.6;
+        margin-bottom: .55rem;
+      }
+      .timeline-item ul { padding-left: 1rem; }
+      .timeline-item__tech {
+        display: block;
+        width: 100%;
+        font-size: .68rem;
+        line-height: 1.5;
+      }
+      .co-badge { width: 36px; height: 36px; font-size: .65rem; }
+    }
+
+    @media (max-width: 359px) {
+      .container { width: min(100% - 1.25rem, var(--max)); }
+      .stats { gap: .35rem; }
+      .stat { padding: .6rem .35rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+      html { scroll-behavior: auto; }
+      html.motion .reveal { opacity: 1; transform: none; }
+    }
+
+    html.embed .progress,
+    html.embed .bottom-nav,
+    html.embed .mobile-cta,
+    html.embed .header,
+    html.embed .drawer,
+    html.embed .fab { display: none !important; }
+    html.embed { --bottom-nav-h: 0px; --nav-h: 0px; }
+    html.embed .hero { padding-top: 1.5rem; }
+    html.embed .section { scroll-margin-top: .75rem; }
+    html.embed .footer { padding-bottom: 2rem; }
+
+    /* In-page nav for Google Sites iframe (no fixed chrome) */
+    .embed-nav {
+      display: none;
+      flex-wrap: wrap;
+      gap: .35rem;
+      padding: 0 0 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: .5rem;
+    }
+    .embed-nav a {
+      padding: .35rem .65rem;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+    .embed-nav a:hover { color: var(--text); border-color: var(--border-strong); }
+    @media (max-width: 767px) {
+      .case__hero { padding: 1rem; }
+      .case__sections { padding: 0 1rem 1rem; }
+      .case__trigger { font-size: .68rem; }
+      .case__inner p { font-size: .84rem; }
+      .case__thumb { font-size: .68rem; padding: .75rem; }
+      .metrics { grid-template-columns: 1fr; }
+      .metric__val { font-size: 1.65rem; }
+      .section__title { font-size: clamp(1.5rem, 6vw, 2rem); }
+      .embed-nav a { font-size: .65rem; padding: .3rem .5rem; }
+    }
+
+    html.embed .embed-nav {
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(3,0,20,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: .65rem 0;
+      margin-bottom: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 300;
+      padding: .65rem 1rem;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: .85rem;
+      border-radius: 8px;
+    }
+    .skip-link:focus { top: .75rem; }
+
+    .portrait {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: linear-gradient(160deg, rgba(59,130,246,.15), rgba(139,92,246,.1));
+      box-shadow: 0 24px 64px rgba(0,0,0,.35);
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portrait__placeholder {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      font-size: 3rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .portrait__note {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: .45rem .65rem;
+      font-size: .58rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--muted);
+      background: rgba(3,0,20,.75);
+      border-top: 1px solid var(--border);
+    }
+
+    .typing::after {
+      content: "|";
+      margin-left: 2px;
+      animation: blink .9s step-end infinite;
+      color: var(--emerald);
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .pill {
+      padding: .35rem .7rem;
+      font-size: .72rem;
+      font-weight: 600;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .pill.is-active {
+      color: var(--text);
+      border-color: rgba(59,130,246,.4);
+      background: rgba(59,130,246,.1);
+    }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.25rem; }
+    .tab {
+      padding: .45rem .85rem;
+      font-size: .75rem;
+      font-weight: 700;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    .tab.is-active, .tab[aria-selected="true"] {
+      color: var(--text);
+      border-color: rgba(59,130,246,.45);
+      background: rgba(59,130,246,.12);
+    }
+    .tab-panel { display: none; animation: fadeIn .4s var(--ease); }
+    .tab-panel.is-active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } }
+
+    .diagram {
+      padding: 1.25rem;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .diagram__layers {
+      display: grid;
+      gap: .5rem;
+    }
+    .diagram__layer {
+      padding: .85rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: .78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      transition: border-color .25s, transform .25s var(--ease);
+    }
+    .diagram__layer:hover { border-color: rgba(52,211,153,.35); transform: translateX(4px); }
+    .diagram__layer small {
+      font-weight: 500;
+      color: var(--muted);
+      font-size: .68rem;
+    }
+
+    .co-badge {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      background: rgba(59,130,246,.12);
+      border: 1px solid rgba(59,130,246,.25);
+      color: var(--blue);
+    }
+    .timeline-item__row { display: flex; gap: .85rem; align-items: flex-start; }
+    .timeline-item__impact {
+      margin: .5rem 0 .75rem;
+      padding: 0;
+      font-size: .78rem;
+      color: var(--emerald);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+    .impact-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+    }
+    .impact-chips span {
+      padding: .35rem .55rem;
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--emerald);
+      background: rgba(52,211,153,.08);
+      border: 1px solid rgba(52,211,153,.18);
+      border-radius: 999px;
+      line-height: 1.3;
+    }
+
+    .case {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .case:hover { border-color: rgba(139,92,246,.3); box-shadow: 0 20px 56px rgba(0,0,0,.22); }
+    .case__hero {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(59,130,246,.06), transparent);
+    }
+    .case__thumb {
+      aspect-ratio: 16/9;
+      margin-top: 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px dashed var(--border-strong);
+      background:
+        linear-gradient(135deg, rgba(59,130,246,.08), rgba(139,92,246,.06)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0 1px, transparent 1px 24px);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 1rem;
+      font-size: .72rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .case__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .75rem;
+      font-size: .68rem;
+      color: var(--muted);
+    }
+    .case__meta span {
+      padding: .25rem .5rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+    }
+    .case__sections { padding: 0 1.25rem 1.25rem; }
+    .case__item { border-top: 1px solid var(--border); }
+    .case__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      padding: .85rem 0;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-align: left;
+    }
+    .case__trigger svg {
+      width: 16px; height: 16px;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+      transition: transform .25s var(--ease);
+    }
+    .case__item.is-open .case__trigger svg { transform: rotate(180deg); }
+    .case__body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .35s var(--ease);
+    }
+    .case__item.is-open .case__body { grid-template-rows: 1fr; }
+    .case__inner { overflow: hidden; }
+    .case__inner p {
+      margin: 0 0 .85rem;
+      font-size: .86rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .philosophy-grid, .focus-grid, .github-grid, .faq-list { display: grid; gap: .75rem; }
+    .quote-card, .focus-card, .github-card, .faq-item {
+      padding: 1.15rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .quote-card b { display: block; margin-bottom: .35rem; font-size: .92rem; }
+    .quote-card p { margin: 0; font-size: .84rem; color: var(--muted); line-height: 1.55; }
+    .focus-card__label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--emerald);
+    }
+    .focus-card h3 { margin: .35rem 0 .5rem; font-size: 1rem; }
+    .focus-card p { margin: 0; font-size: .84rem; color: var(--muted); line-height: 1.55; }
+
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .75rem;
+      padding: 0;
+      font-size: .92rem;
+      font-weight: 700;
+      text-align: left;
+    }
+    .faq-item.is-open .faq-answer { display: block; }
+    .faq-answer {
+      display: none;
+      margin: .65rem 0 0;
+      font-size: .84rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .faq-trigger svg {
+      width: 18px; height: 18px;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+      transition: transform .25s;
+    }
+    .faq-item.is-open .faq-trigger svg { transform: rotate(180deg); }
+
+    .achievements {
+      display: grid;
+      gap: .65rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .achievement {
+      display: flex;
+      gap: .75rem;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .achievement__icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(139,92,246,.12);
+      color: var(--purple);
+      font-size: .65rem;
+      font-weight: 800;
+    }
+
+    @media (min-width: 768px) {
+      .philosophy-grid { grid-template-columns: repeat(3, 1fr); }
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+      .github-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero__grid { grid-template-columns: 1.05fr .95fr; }
+      .hero__visual { display: grid; gap: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .typing::after { animation: none; }
+    }
+  </style>
+  <noscript><style>html.motion .reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__aurora"></div>
+    <div class="bg__glow"></div>
+    <div class="bg__particles"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__cursor" id="cursorGlow"></div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="logo" href="#top" aria-label="Home">M<span>.</span>MA</a>
+      <nav class="nav-desktop" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#projects">Projects</a>
+        <a href="#proof">Proof</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-sm btn--primary" href="https://drive.google.com/uc?export=download&amp;id=1Q5IzPAwzVtmt5xFxYbkQaBvT3yZMFzXb" target="_blank" rel="noopener">CV</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" id="menuBtn">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-label="Navigation menu">
+      <div class="drawer__head">
+        <span class="logo">M<span>.</span>MA</span>
+        <button type="button" aria-label="Close menu" id="menuClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="drawer__links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#projects">Projects</a>
+        <a href="#proof">Proof</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Mobile">
+    <div class="bottom-nav__inner">
+      <a href="#about" data-nav="about"><svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>About</a>
+      <a href="#experience" data-nav="experience"><svg viewBox="0 0 24 24"><path d="M20 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Work</a>
+      <a href="#projects" data-nav="projects"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Projects</a>
+      <a href="#proof" data-nav="proof"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z"/></svg>Proof</a>
+      <a href="#contact" data-nav="contact"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg>Contact</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <nav class="embed-nav container" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#projects">Projects</a>
+      <a href="#proof">Proof</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="badge"><span class="badge__dot"></span> Available for senior roles</div>
+          <h1 class="hero__title">
+            Mohamed<br />Mahmoud<br />
+            <span class="grad">Abd Alftah</span>
+          </h1>
+          <p class="hero__subtitle">Senior Android Engineer building <em>payment systems that move real money.</em></p>
+          <p class="hero__role"><span class="typing" id="roleCycle" aria-live="polite">Payment Systems Engineer</span></p>
+          <div class="hero__tags" aria-label="Core expertise">
+            <span>Android</span><span>Kotlin</span><span>Compose</span><span>EMV</span><span>ISO 8583</span><span>POS</span><span>L3</span><span>Security</span>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary magnetic" href="https://drive.google.com/uc?export=download&amp;id=1Q5IzPAwzVtmt5xFxYbkQaBvT3yZMFzXb" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+              Download CV
+            </a>
+            <a class="btn btn--ghost magnetic" href="#contact">
+              Let's talk
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+            </a>
+          </div>
+          <div class="stats" style="margin-top:1.25rem">
+            <div class="stat"><span class="stat__val" data-count="9" data-suffix="+">9</span><span class="stat__lbl">Years Android</span></div>
+            <div class="stat"><span class="stat__val" data-count="500" data-suffix="K+">500K+</span><span class="stat__lbl">Live installs</span></div>
+            <div class="stat"><span class="stat__val">L3</span><span class="stat__lbl">Visa + MC</span></div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <figure class="portrait reveal">
+            <div class="portrait__placeholder" aria-hidden="true">MM</div>
+            <figcaption class="portrait__note">Placeholder — add professional portrait</figcaption>
+          </figure>
+          <div class="code-card tilt-card reveal" id="codeCard">
+            <div class="code-card__bar" aria-hidden="true"><i></i><i></i><i></i><span>PAYMENT_ENGINE.kt</span></div>
+            <pre aria-label="Kotlin payment engine example"><code><span class="kw">class</span> <span class="ty">PaymentEngine</span> {
+  <span class="kw">suspend fun</span> <span class="fn">authorize</span>(
+    request: <span class="ty">EmvTransaction</span>
+  ): <span class="ty">PaymentResult</span> =
+    secureChannel.<span class="fn">process</span>(
+      iso8583.<span class="fn">encode</span>(request)
+    ) <span class="cm">// EMV · L3 ready</span>
+}</code></pre>
+          </div>
+          <div class="avatar-card reveal">
+            <div class="avatar" aria-hidden="true">MM</div>
+            <div class="avatar-card__meta">
+              <strong>Senior Android &amp; POS Engineer</strong>
+              <span>Cairo · Remote &amp; EU relocation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <span class="section__eyebrow">01 · About</span>
+        <h2 class="section__title">Engineering depth.<br />Commercial impact.</h2>
+        <p class="section__desc">I work where Android, payment infrastructure, device hardware, and banking reliability meet.</p>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I am a Senior Android Engineer with <strong>9 years of production experience</strong> delivering mobile and card-present POS systems for banks and merchants across MENA. My work spans Android platform engineering, payment protocols, device integrations, and the architecture required to keep financial flows secure and maintainable.</p>
+            <p>At PaySky, I own bank-facing products end to end: stabilizing legacy systems, leading Java-to-Kotlin migrations, designing multi-flavor platforms, integrating terminal SDKs, and supporting <strong>Visa and Mastercard L3 certification</strong>. I also build Compose applications, payment SDKs, and secure key-management tooling used across partner and merchant ecosystems.</p>
+            <div class="tags">
+              <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">EMV</span><span class="tag">ISO 8583</span><span class="tag">L3</span><span class="tag">Clean Architecture</span><span class="tag">Embedded Android</span><span class="tag">NFC</span>
+            </div>
+          </div>
+          <div class="highlights reveal">
+            <div class="highlight"><span class="highlight__num">01</span><div><b>Bank-grade delivery</b><span>Production POS systems, payment SDKs, and merchant apps</span></div></div>
+            <div class="highlight"><span class="highlight__num">02</span><div><b>Platform modernization</b><span>Java → Kotlin migration and multi-flavor architecture</span></div></div>
+            <div class="highlight"><span class="highlight__num">03</span><div><b>Payment expertise</b><span>EMV, ISO 8583, NFC, key injection, and L3 readiness</span></div></div>
+            <div class="highlight"><span class="highlight__num">04</span><div><b>Product reach</b><span>Live apps at 500K+, 10K+, and 5K+ Play Store installs</span></div></div>
+          </div>
+        </div>
+        <div class="philosophy-grid reveal" style="margin-top:2.5rem" id="philosophy">
+          <article class="quote-card"><b>Reliability over novelty</b><p>Payment software fails loudly. I optimize for predictable transaction paths, testable boundaries, and production observability — not clever abstractions that break under scheme certification pressure.</p></article>
+          <article class="quote-card"><b>Architecture serves constraints</b><p>Multi-flavor Android, device SDK variance, and ISO 8583 host rules shape the design. Clean Architecture is how I keep those constraints isolated and shippable across banks.</p></article>
+          <article class="quote-card"><b>Security is a delivery requirement</b><p>Key injection, root detection, SSL pinning, and R8 hardening are part of the release — not a post-launch checklist.</p></article>
+        </div>
+        <div class="focus-grid reveal" style="margin-top:1.5rem" id="focus">
+          <article class="focus-card"><span class="focus-card__label">Now building</span><h3>Compose merchant platforms &amp; payment SDKs</h3><p>Modernizing merchant-facing Android products and reusable SDK surfaces for partner integrations across MENA payment ecosystems.</p></article>
+          <article class="focus-card"><span class="focus-card__label">Current focus</span><h3>Scheme-ready POS &amp; EMV flows</h3><p>Visa/Mastercard L3 readiness, contact/contactless EMV, ISO 8583 host messaging, and secure key lifecycle on production terminal fleets.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <span class="section__eyebrow">02 · Experience</span>
+        <h2 class="section__title">Device to payment host.</h2>
+        <p class="section__desc">Outcomes, architectural responsibility, and production delivery — not routine task lists.</p>
+        <div class="timeline">
+          <article class="timeline-item reveal is-open">
+            <button class="timeline-item__toggle" type="button" aria-expanded="true">
+              <div class="timeline-item__head">
+                <h3>Senior Android &amp; POS Payments Engineer</h3>
+                <span class="timeline-item__date">Jun 2022 – Present</span>
+              </div>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="timeline-item__body">
+              <div class="timeline-item__inner">
+                <div class="timeline-item__row">
+                  <span class="co-badge" aria-hidden="true">PS</span>
+                  <div>
+                    <p class="timeline-item__co">PaySky · Egypt · Card-present payments</p>
+                    <div class="timeline-item__impact impact-chips" aria-label="Key impact">
+                      <span>Primary engineer · CIB POS</span>
+                      <span>L3 certification</span>
+                      <span>500K+ merchant reach</span>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>Owned end-to-end delivery of <strong>CIB POS</strong> — multi-flavor architecture, large-scale refactoring, and Java → Kotlin migration.</li>
+                  <li>Drove <strong>Visa &amp; Mastercard L3 certification</strong> readiness and EMV-compliant secure flows.</li>
+                  <li>Integrated POS device SDKs over REST and <strong>ISO 8583 (1987/1993)</strong>; delivered <strong>GIM POS</strong> host integration.</li>
+                  <li>Built <strong>KeyInjector</strong> for secure key injection/lifecycle; implemented EMV flows including <strong>InstaPay</strong>.</li>
+                  <li>Rebuilt Merchant App on Compose + Hilt + Coroutines/Flow; owned Payment SDKs and <strong>PayButton SDK</strong>.</li>
+                  <li>Delivered NFC merchant apps for MENA brands — live at <strong>500K+ / 10K+ / 5K+</strong> Play downloads.</li>
+                </ul>
+                <span class="timeline-item__tech">Kotlin · Compose · EMV · ISO 8583 · POS SDKs · L3 · Key Mgmt · NFC</span>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <button class="timeline-item__toggle" type="button" aria-expanded="false">
+              <div class="timeline-item__head">
+                <h3>Senior Android Developer</h3>
+                <span class="timeline-item__date">Feb 2021 – Jun 2022</span>
+              </div>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="timeline-item__body">
+              <div class="timeline-item__inner">
+                <div class="timeline-item__row"><span class="co-badge">PD</span><p class="timeline-item__co">Pixel Design · Egypt</p></div>
+                <ul><li>Modernized legacy modules with Kotlin, MVVM, Hilt, and Coroutines/Flow; shipped production features.</li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <button class="timeline-item__toggle" type="button" aria-expanded="false">
+              <div class="timeline-item__head">
+                <h3>Android Developer</h3>
+                <span class="timeline-item__date">May 2019 – Feb 2021</span>
+              </div>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="timeline-item__body">
+              <div class="timeline-item__inner">
+                <div class="timeline-item__row"><span class="co-badge">LS</span><p class="timeline-item__co">Lodex Solutions · Egypt</p></div>
+                <ul><li>Built features with MVVM + RxJava; refactored for performance and supported production releases.</li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <button class="timeline-item__toggle" type="button" aria-expanded="false">
+              <div class="timeline-item__head">
+                <h3>Android Developer</h3>
+                <span class="timeline-item__date">Sep 2017 – May 2019</span>
+              </div>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="timeline-item__body">
+              <div class="timeline-item__inner">
+                <div class="timeline-item__row"><span class="co-badge">EA</span><p class="timeline-item__co">EgyAdv · Egypt</p></div>
+                <ul><li>Owned v1 delivery end-to-end (architecture, data layer, UI) and refactored legacy bottlenecks.</li></ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <span class="section__eyebrow">03 · Skills</span>
+        <h2 class="section__title">Built for production.</h2>
+        <p class="section__desc">Categorized by production domain — depth shaped by payment reliability and embedded Android constraints.</p>
+        <div class="tabs reveal" role="tablist" aria-label="Skill categories">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="android">Android</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="arch">Architecture</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="pay">Payments</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="sec">Security</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tools">Tools</button>
+        </div>
+        <div class="tab-panel is-active reveal" id="tab-android" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">Languages</span><p>Kotlin, Java</p><div class="skill-bar" aria-hidden="true"><span style="width:95%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">UI &amp; Framework</span><p>Jetpack Compose, XML, ViewModel, Navigation, Paging, Room</p><div class="skill-bar" aria-hidden="true"><span style="width:92%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Async &amp; DI</span><p>Coroutines, Flow, Hilt, lifecycle-aware state</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
+          </div>
+        </div>
+        <div class="tab-panel reveal" id="tab-arch" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">Patterns</span><p>Clean Architecture, MVVM, Repository, Use Cases, SOLID</p><div class="skill-bar" aria-hidden="true"><span style="width:90%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Platform</span><p>Multi-flavor builds, modularization, SDK boundaries</p><div class="skill-bar" aria-hidden="true"><span style="width:88%"></span></div></div>
+          </div>
+        </div>
+        <div class="tab-panel reveal" id="tab-pay" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">Protocols</span><p>EMV contact/contactless, ISO 8583 (87/93), jPOS, InstaPay</p><div class="skill-bar" aria-hidden="true"><span style="width:96%"></span></div></div>
+            <div class="skill-card is-visible"><span class="skill-card__cat">Terminal</span><p>POS SDK integration, NFC, Visa/Mastercard L3 readiness</p><div class="skill-bar" aria-hidden="true"><span style="width:94%"></span></div></div>
+          </div>
+        </div>
+        <div class="tab-panel reveal" id="tab-sec" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">Hardening</span><p>R8/ProGuard, root detection, SSL pinning, secure key injection</p><div class="skill-bar" aria-hidden="true"><span style="width:87%"></span></div></div>
+          </div>
+        </div>
+        <div class="tab-panel reveal" id="tab-tools" role="tabpanel">
+          <div class="skills-grid">
+            <div class="skill-card is-visible"><span class="skill-card__cat">Delivery</span><p>Retrofit, OkHttp, Git, Bitbucket, Jira, Postman, Play Store release</p><div class="skill-bar" aria-hidden="true"><span style="width:85%"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <span class="section__eyebrow">04 · Architecture</span>
+        <h2 class="section__title">Survives real constraints.</h2>
+        <p class="section__desc">Clear boundaries between device hardware, transaction logic, security controls, and host communication.</p>
+        <div class="arch-grid reveal">
+          <article class="arch-card"><span class="arch-card__num">01 / PLATFORM</span><h3>Modular Android</h3><p>Clean Architecture, multi-flavor builds, reusable domain modules for multiple banks and devices.</p></article>
+          <article class="arch-card"><span class="arch-card__num">02 / PAYMENTS</span><h3>Card-present flows</h3><p>EMV contact/contactless, ISO 8583 messaging, transaction state, reversals, and L3 readiness.</p></article>
+          <article class="arch-card"><span class="arch-card__num">03 / SECURITY</span><h3>Defense in depth</h3><p>Secure key lifecycle, SSL pinning, root/debug detection, R8/ProGuard hardening.</p></article>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="Architecture diagrams">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-arch="clean">Clean Architecture</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-arch="payment">Payment lifecycle</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-arch="emv">EMV flow</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-arch="iso">ISO 8583</button>
+        </div>
+        <div class="tab-panel is-active diagram reveal" id="arch-clean" role="tabpanel">
+          <div class="diagram__layers">
+            <div class="diagram__layer">Compose / POS UI <small>Presentation</small></div>
+            <div class="diagram__layer">ViewModel + State <small>UI logic</small></div>
+            <div class="diagram__layer">Use Cases <small>Domain rules</small></div>
+            <div class="diagram__layer">Repository <small>Data contracts</small></div>
+            <div class="diagram__layer">Remote / Device SDK / Room <small>Sources</small></div>
+          </div>
+        </div>
+        <div class="tab-panel diagram reveal" id="arch-payment" role="tabpanel">
+          <div class="flow" aria-label="Payment flow">
+            <span class="flow__node">Merchant UI</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Transaction Engine</span><span class="flow__arrow">→</span>
+            <span class="flow__node">EMV Kernel</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Device SDK</span><span class="flow__arrow">→</span>
+            <span class="flow__node">ISO 8583</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Acquirer Host</span>
+          </div>
+        </div>
+        <div class="tab-panel diagram reveal" id="arch-emv" role="tabpanel">
+          <div class="flow" aria-label="EMV flow">
+            <span class="flow__node">Card Tap/Insert</span><span class="flow__arrow">→</span>
+            <span class="flow__node">AID Selection</span><span class="flow__arrow">→</span>
+            <span class="flow__node">CVM / PIN</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Cryptogram</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Authorization</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Receipt</span>
+          </div>
+        </div>
+        <div class="tab-panel diagram reveal" id="arch-iso" role="tabpanel">
+          <div class="flow" aria-label="ISO 8583 flow">
+            <span class="flow__node">Transaction Data</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Message Builder</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Bitmap / Fields</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Secure Channel</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Host Response</span><span class="flow__arrow">→</span>
+            <span class="flow__node">State Update</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="section__eyebrow">05 · Projects</span>
+        <h2 class="section__title">Case studies.</h2>
+        <p class="section__desc">Engineering case studies with verified outcomes. Banking confidentiality limits public screenshots — placeholders marked accordingly.</p>
+        <div class="projects">
+          <article class="case reveal">
+            <div class="case__hero">
+              <div class="project__head" style="margin:0"><h3>CIB POS Platform</h3><span class="project__type">Banking · Primary Engineer</span></div>
+              <p style="margin:.5rem 0 0;font-size:.88rem;color:var(--muted)">End-to-end ownership of a bank-facing card-present POS — from legacy stabilization to scheme-ready EMV delivery.</p>
+              <div class="case__thumb" role="img" aria-label="Screenshot placeholder">Screenshot placeholder — confidential banking UI<br />Representative POS layout only</div>
+              <div class="case__meta"><span>Timeline: 2022–Present</span><span>Role: Primary engineer</span><span>Stack: Kotlin · EMV · ISO 8583 · L3</span></div>
+            </div>
+            <div class="case__sections">
+              <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Primary engineer for CIB's merchant POS platform — multi-flavor Android product integrating terminal SDKs, EMV kernels, and ISO 8583 host messaging for production card-present transactions.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Problem<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Legacy Java codebase with fragile payment paths, inconsistent EMV behavior, and no clear modular boundaries for multi-bank/device variants.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Business goal<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Ship a maintainable, scheme-ready POS product supporting Visa/Mastercard L3 certification, InstaPay, and reliable production releases for CIB merchants.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Architecture<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Clean Architecture with multi-flavor modules separating UI, domain use cases, EMV/ISO 8583 adapters, and device SDK integrations. Java → Kotlin migration with coroutine-based transaction orchestration.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Technical decisions<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Isolated payment domain from device variance via repository pattern; standardized transaction state machine; ISO 8583 (1987/1993) encoding behind testable interfaces; flavor-driven configuration for bank-specific flows.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Challenges<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Certification-grade EMV edge cases, legacy migration without production downtime, coordinating POS SDK + host message formats under L3 audit constraints.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Result &amp; impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Visa/Mastercard L3 delivery support, InstaPay and contact/contactless flows in production, maintainable bank release cadence, stabilized platform for ongoing merchant rollout.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Lessons learned<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Payment platforms reward boring architecture — explicit transaction states and certification-friendly test hooks matter more than UI polish in early delivery phases.</p></div></div></div>
+            </div>
+            <div class="tags" style="padding:0 1.25rem 1.25rem"><span class="tag">Kotlin</span><span class="tag">EMV</span><span class="tag">ISO 8583</span><span class="tag">L3</span></div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__hero">
+              <div class="project__head" style="margin:0"><h3>Merchant Apps &amp; Payment SDKs</h3><span class="project__type">Platform · Ecosystem</span></div>
+              <p style="margin:.5rem 0 0;font-size:.88rem;color:var(--muted)">Compose merchant products and reusable SDK surfaces for partners — verified public install reach.</p>
+              <div class="case__thumb" role="img" aria-label="App store proof">Public proof: Orange 500K+ · ADCB 10K+ · QNB 5K+ Play Store installs</div>
+              <div class="case__meta"><span>Timeline: 2022–Present</span><span>Stack: Compose · Hilt · SDK</span></div>
+            </div>
+            <div class="case__sections">
+              <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Rebuilt Merchant App on Compose + Hilt; owned Payment SDK and PayButton SDK for partner integrations across MENA merchant brands.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Business goal<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Consistent, secure payment capabilities for merchants and partners without re-implementing EMV/NFC flows per brand.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Reusable integration paths; live apps at 500K+, 10K+, and 5K+ installs; reduced partner defect cycles on live payment paths.</p></div></div></div>
+            </div>
+            <div class="project__links" style="padding:0 1.25rem 1.25rem">
+              <a href="https://play.google.com/store/apps/details?id=io.paysky.orange&amp;hl=en" target="_blank" rel="noopener">Orange 500K+ ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=io.paysky.adcb&amp;hl=en" target="_blank" rel="noopener">ADCB 10K+ ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=io.paysky.qnb&amp;hl=en" target="_blank" rel="noopener">QNB 5K+ ↗</a>
+            </div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__hero">
+              <div class="project__head" style="margin:0"><h3>SmartBox / GIM POS</h3><span class="project__type">Embedded · Acquiring</span></div>
+              <div class="case__meta"><span>EMV + ISO 8583</span><span>GIM host integration</span></div>
+            </div>
+            <div class="case__sections">
+              <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Android POS acquiring integration — EMV processing and ISO 8583 messaging aligned with GIM host requirements for embedded terminals.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Result<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Production card-present transaction processing on embedded Android POS hardware.</p></div></div></div>
+            </div>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__hero">
+              <div class="project__head" style="margin:0"><h3>KeyInjector &amp; TMS Agent</h3><span class="project__type">Security · Fleet</span></div>
+              <div class="case__meta"><span>Key lifecycle</span><span>TMS remote ops</span></div>
+            </div>
+            <div class="case__sections">
+              <div class="case__item is-open"><button class="case__trigger" type="button" aria-expanded="true">Overview<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Secure key injection tooling and TMS Agent app for remote configuration and fleet control — preserving security boundaries across POS fleets.</p></div></div></div>
+              <div class="case__item"><button class="case__trigger" type="button" aria-expanded="false">Impact<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="case__body"><div class="case__inner"><p>Centralized sensitive fleet operations with auditable key handling workflows.</p></div></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="section" id="proof">
+      <div class="container">
+        <span class="section__eyebrow">06 · Proof</span>
+        <h2 class="section__title">Shipped systems.</h2>
+        <p class="section__desc">Verified public and delivery signals — no inflated claims.</p>
+        <div class="achievements reveal" style="margin-bottom:1.5rem">
+          <div class="achievement"><span class="achievement__icon">L3</span><div><b>Visa &amp; Mastercard L3</b><span style="display:block;font-size:.78rem;color:var(--muted)">Certification delivery support on production POS platform</span></div></div>
+          <div class="achievement"><span class="achievement__icon">500K</span><div><b>Orange Merchant</b><span style="display:block;font-size:.78rem;color:var(--muted)">Public Play Store install milestone</span></div></div>
+          <div class="achievement"><span class="achievement__icon">9Y</span><div><b>Production Android</b><span style="display:block;font-size:.78rem;color:var(--muted)">Continuous delivery since 2017</span></div></div>
+          <div class="achievement"><span class="achievement__icon">POS</span><div><b>Bank-grade systems</b><span style="display:block;font-size:.78rem;color:var(--muted)">CIB POS · GIM · KeyInjector · SDKs</span></div></div>
+        </div>
+        <div class="metrics reveal">
+          <div class="metric"><span class="metric__val" data-count="9" data-suffix="+">0</span><span class="metric__lbl">Years production Android delivery</span></div>
+          <div class="metric"><span class="metric__val" data-count="500" data-suffix="K+">0</span><span class="metric__lbl">Orange Merchant Play Store installs</span></div>
+          <div class="metric"><span class="metric__val">Visa + MC</span><span class="metric__lbl">Successful L3 certification delivery support</span></div>
+          <div class="metric"><span class="metric__val">3</span><span class="metric__lbl">Live merchant apps on Play Store (Orange, ADCB, QNB)</span></div>
+          <div class="metric"><span class="metric__val">MENA</span><span class="metric__lbl">Bank &amp; merchant payment systems across the region</span></div>
+          <div class="metric"><span class="metric__val">ISO 8583</span><span class="metric__lbl">Production host messaging (1987 / 1993)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <section class="section" id="github">
+      <div class="container">
+        <span class="section__eyebrow">07 · GitHub</span>
+        <h2 class="section__title">Code &amp; craft.</h2>
+        <p class="section__desc">Most payment and banking work is private — public activity reflects personal projects and engineering experiments.</p>
+        <div class="github-grid reveal">
+          <a class="github-card" href="https://github.com/Mohamed-Mahmoud-Abdalftah" target="_blank" rel="noopener">
+            <span class="focus-card__label">Profile</span>
+            <h3 style="margin:.35rem 0 .5rem;font-size:1rem">Mohamed-Mahmoud-Abdalftah</h3>
+            <p style="margin:0;font-size:.84rem;color:var(--muted)">View repositories, contributions, and open-source work ↗</p>
+          </a>
+          <div class="github-card"><span class="focus-card__label">Placeholder</span><h3 style="margin:.35rem 0 .5rem;font-size:1rem">Featured repository</h3><p style="margin:0;font-size:.84rem;color:var(--muted)">Add a public repo highlight when available</p></div>
+          <div class="github-card"><span class="focus-card__label">References</span><h3 style="margin:.35rem 0 .5rem;font-size:1rem">Professional references</h3><p style="margin:0;font-size:.84rem;color:var(--muted)">Available on request — not fabricated here</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="section__eyebrow">08 · FAQ</span>
+        <h2 class="section__title">Recruiter questions.</h2>
+        <p class="section__desc">Straight answers — no generic pitch.</p>
+        <div class="faq-list reveal">
+          <article class="faq-item is-open"><button class="faq-trigger" type="button" aria-expanded="true">What roles are you targeting?<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-answer">Senior Android, platform, POS, and payment-engineering roles — teams building production financial systems, not prototype apps.</p></article>
+          <article class="faq-item"><button class="faq-trigger" type="button" aria-expanded="false">Remote or relocation?<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-answer">Open to remote and relocation to Europe. Based in Cairo, Egypt.</p></article>
+          <article class="faq-item"><button class="faq-trigger" type="button" aria-expanded="false">Why few banking screenshots?<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-answer">Bank and POS products are confidential. Case studies focus on verified architecture, responsibilities, and public proof (Play Store installs, L3 delivery) instead of unreleased UI.</p></article>
+          <article class="faq-item"><button class="faq-trigger" type="button" aria-expanded="false">What does L3 experience mean?<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-answer">Hands-on delivery supporting Visa and Mastercard L3 certification readiness on a production POS platform — EMV flows, host messaging, and scheme audit requirements. This is delivery experience, not a personal certificate.</p></article>
+          <article class="faq-item"><button class="faq-trigger" type="button" aria-expanded="false">What is your strongest differentiator?<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-answer">Full-stack Android payment delivery: UI → domain → EMV → device SDK → ISO 8583 → certification — with live merchant products at 500K+ installs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="section__eyebrow">09 · Contact</span>
+          <h2 class="contact-title">Building serious<br />Android systems?<br /><span>Let's talk.</span></h2>
+          <p class="contact-note">Open to senior Android, platform, POS, and payment-engineering roles — remote or relocation to Europe.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="mailto:mohamed.m.abdalftah@gmail.com">Send email</a>
+            <a class="btn btn--ghost" href="https://drive.google.com/uc?export=download&amp;id=1Q5IzPAwzVtmt5xFxYbkQaBvT3yZMFzXb" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+        <div class="contact-cards reveal">
+          <a class="contact-card" href="mailto:mohamed.m.abdalftah@gmail.com"><span class="contact-card__icon">@</span><div><span class="contact-card__label">Email</span><span class="contact-card__val">mohamed.m.abdalftah@gmail.com</span></div></a>
+          <a class="contact-card" href="https://www.linkedin.com/in/mohamedmahmoud95/" target="_blank" rel="noopener"><span class="contact-card__icon">in</span><div><span class="contact-card__label">LinkedIn</span><span class="contact-card__val">mohamedmahmoud95</span></div></a>
+          <a class="contact-card" href="https://github.com/Mohamed-Mahmoud-Abdalftah" target="_blank" rel="noopener"><span class="contact-card__icon">GH</span><div><span class="contact-card__label">GitHub</span><span class="contact-card__val">Mohamed-Mahmoud-Abdalftah</span></div></a>
+          <a class="contact-card" href="tel:+201068690777"><span class="contact-card__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.11a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"/></svg></span><div><span class="contact-card__label">Phone</span><span class="contact-card__val">+20 106 869 0777</span></div></a>
+          <div class="contact-card"><span class="contact-card__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span><div><span class="contact-card__label">Location</span><span class="contact-card__val">Cairo, Egypt</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year"></span> Mohamed Mahmoud Abd Alftah</span>
+    <span>B.Sc. MIS · 2013–2017</span>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Quick actions">
+    <div class="mobile-cta__inner">
+      <a class="btn btn--ghost" href="#contact">Let's talk</a>
+      <a class="btn btn--primary" href="https://drive.google.com/uc?export=download&amp;id=1Q5IzPAwzVtmt5xFxYbkQaBvT3yZMFzXb" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+
+  <a class="fab" href="https://wa.me/201068690777" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6a12 12 0 0 0 5.9 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4zM12.1 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 0 1 2.1 12C2.1 6.5 6.6 2 12.1 2c2.7 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.5-4.5 10.1-9.9 10.1z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (window.self !== window.top) html.classList.add("embed");
+      if (!reduced) html.classList.add("motion");
+
+      /* Google Sites iframe: smooth in-page anchors only */
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href");
+          if (!id || id === "#") return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+          history.replaceState(null, "", id);
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      /* Header scroll */
+      const header = document.getElementById("header");
+      const progress = document.querySelector(".progress");
+      const onScroll = () => {
+        const y = window.scrollY;
+        header.classList.toggle("is-scrolled", y > 20);
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        if (progress) progress.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
+        const mobileCta = document.querySelector(".mobile-cta");
+        const hero = document.querySelector(".hero");
+        if (mobileCta && hero) {
+          mobileCta.classList.toggle("is-visible", y > hero.offsetHeight * 0.55);
+        }
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      /* Mobile menu */
+      const drawer = document.getElementById("drawer");
+      const menuBtn = document.getElementById("menuBtn");
+      const menuClose = document.getElementById("menuClose");
+      const openMenu = () => { drawer.classList.add("is-open"); drawer.setAttribute("aria-hidden", "false"); menuBtn.setAttribute("aria-expanded", "true"); };
+      const closeMenu = () => { drawer.classList.remove("is-open"); drawer.setAttribute("aria-hidden", "true"); menuBtn.setAttribute("aria-expanded", "false"); };
+      menuBtn.addEventListener("click", openMenu);
+      menuClose.addEventListener("click", closeMenu);
+      drawer.addEventListener("click", (e) => { if (e.target === drawer) closeMenu(); });
+      drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+      /* Scroll spy */
+      const navLinks = [...document.querySelectorAll('.nav-desktop a[href^="#"], .bottom-nav a[href^="#"]')];
+      const sections = navLinks.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+      const spy = () => {
+        const y = window.scrollY + 100;
+        let current = sections[0];
+        for (const s of sections) { if (s.offsetTop <= y) current = s; }
+        navLinks.forEach((a) => {
+          const active = a.getAttribute("href") === "#" + current.id;
+          a.classList.toggle("is-active", active);
+          a.classList.toggle("active", active);
+        });
+      };
+      window.addEventListener("scroll", spy, { passive: true });
+      spy();
+
+      /* Reveal */
+      const reveals = [...document.querySelectorAll(".reveal")];
+      const skillCards = [...document.querySelectorAll(".skill-card")];
+      if ("IntersectionObserver" in window && html.classList.contains("motion")) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -40px" });
+        reveals.forEach((el) => io.observe(el));
+        skillCards.forEach((el) => io.observe(el));
+        setTimeout(() => reveals.forEach((el) => el.classList.add("is-visible")), 1500);
+      } else {
+        reveals.forEach((el) => el.classList.add("is-visible"));
+        skillCards.forEach((el) => el.classList.add("is-visible"));
+      }
+
+      /* Timeline accordion */
+      document.querySelectorAll(".timeline-item__toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".timeline-item");
+          const open = item.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      });
+
+      /* Generic accordion helper */
+      const bindAccordion = (selector, itemSel) => {
+        document.querySelectorAll(selector).forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const item = btn.closest(itemSel);
+            const open = item.classList.toggle("is-open");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      };
+      bindAccordion(".case__trigger", ".case__item");
+      bindAccordion(".faq-trigger", ".faq-item");
+
+      /* Tab groups */
+      const initTabs = (tablist, attr, prefix) => {
+        const tabs = [...tablist.querySelectorAll(".tab")];
+        const panels = tabs.map((t) => document.getElementById(prefix + t.dataset[attr]));
+        tabs.forEach((tab, idx) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((t, i) => {
+              const on = i === idx;
+              t.classList.toggle("is-active", on);
+              t.setAttribute("aria-selected", on ? "true" : "false");
+              if (panels[i]) panels[i].classList.toggle("is-active", on);
+            });
+          });
+        });
+      };
+      document.querySelectorAll('[aria-label="Skill categories"]').forEach((el) => initTabs(el, "tab", "tab-"));
+      document.querySelectorAll('[aria-label="Architecture diagrams"]').forEach((el) => initTabs(el, "arch", "arch-"));
+
+      /* Typewriter roles */
+      const roleEl = document.getElementById("roleCycle");
+      const roles = matchMedia("(max-width: 767px)").matches
+        ? ["Payment Systems", "EMV · ISO 8583", "POS Engineer", "L3 Delivery"]
+        : [
+            "Payment Systems Engineer",
+            "EMV & ISO 8583 Specialist",
+            "POS & Embedded Android",
+            "Visa/Mastercard L3 Delivery"
+          ];
+      if (roleEl && !reduced) {
+        let r = 0, c = 0, deleting = false;
+        const tick = () => {
+          const word = roles[r];
+          c = deleting ? c - 1 : c + 1;
+          roleEl.textContent = word.slice(0, c);
+          if (!deleting && c === word.length) { deleting = true; setTimeout(tick, 1800); return; }
+          if (deleting && c === 0) { deleting = false; r = (r + 1) % roles.length; }
+          setTimeout(tick, deleting ? 35 : 55);
+        };
+        tick();
+      }
+
+      /* Code card tilt */
+      const codeCard = document.getElementById("codeCard");
+      if (codeCard && !reduced && matchMedia("(pointer: fine)").matches) {
+        codeCard.addEventListener("pointermove", (e) => {
+          const r = codeCard.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          codeCard.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+        });
+        codeCard.addEventListener("pointerleave", () => { codeCard.style.transform = ""; });
+      }
+
+      /* Drawer focus trap lite */
+      const focusables = () => [...drawer.querySelectorAll('a, button')];
+      drawer.addEventListener("keydown", (e) => {
+        if (!drawer.classList.contains("is-open") || e.key !== "Tab") return;
+        const items = focusables();
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && drawer.classList.contains("is-open")) closeMenu();
+      });
+
+      /* Cursor glow */
+      const glow = document.getElementById("cursorGlow");
+      if (glow && !reduced && matchMedia("(pointer: fine)").matches) {
+        window.addEventListener("pointermove", (e) => {
+          glow.style.left = e.clientX + "px";
+          glow.style.top = e.clientY + "px";
+        }, { passive: true });
+      }
+
+      /* Magnetic buttons */
+      if (!reduced && matchMedia("(pointer: fine)").matches) {
+        document.querySelectorAll(".btn--primary, .btn--ghost").forEach((btn) => {
+          btn.addEventListener("pointermove", (e) => {
+            const r = btn.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) * 0.12;
+            const y = (e.clientY - r.top - r.height / 2) * 0.12;
+            btn.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+          });
+          btn.addEventListener("pointerleave", () => { btn.style.transform = ""; });
+        });
+      }
+
+      /* Counter animation */
+      const counters = [...document.querySelectorAll("[data-count]")];
+      const animateCounter = (el) => {
+        const target = +el.dataset.count;
+        const suffix = el.dataset.suffix || "";
+        if (reduced || !target) { el.textContent = target + suffix; return; }
+        const duration = 1200;
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * ease) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      if ("IntersectionObserver" in window) {
+        const cio = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { animateCounter(e.target); cio.unobserve(e.target); } });
+        }, { threshold: 0.5 });
+        counters.forEach((el) => cio.observe(el));
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+  </script>
+</body>
+</html>
