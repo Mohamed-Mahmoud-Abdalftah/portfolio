@@ -18,10 +18,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohamed Mahmoud — Senior Android &amp; POS Engineer" />
   <meta name="twitter:description" content="Senior Android Engineer · Payment Systems · EMV · ISO 8583 · L3" />
-  <meta property="og:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/og.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/og.svg" />
+  <meta property="og:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/profile.png" />
+  <meta property="og:image:width" content="768" />
+  <meta property="og:image:height" content="1024" />
+  <meta name="twitter:image" content="https://mohamed-mahmoud-abdalftah.github.io/portfolio/profile.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,6 +41,7 @@
       "https://www.linkedin.com/in/mohamedmahmoud95/"
     ],
     "knowsAbout": ["Android", "Kotlin", "Jetpack Compose", "EMV", "ISO 8583", "POS Systems", "Payment Systems", "NFC", "Clean Architecture"],
+    "image": "https://mohamed-mahmoud-abdalftah.github.io/portfolio/profile.png",
     "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" }
   }
   </script>
@@ -494,6 +495,13 @@
       font-weight: 800;
       font-size: 1.25rem;
       color: #fff;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
     }
     .avatar-card__meta strong { display: block; font-size: .95rem; }
     .avatar-card__meta span { font-size: .78rem; color: var(--muted); }
@@ -1315,6 +1323,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 20%;
     }
     .portrait__placeholder {
       display: grid;
@@ -1730,8 +1739,7 @@
         </div>
         <div class="hero__visual">
           <figure class="portrait reveal">
-            <div class="portrait__placeholder" aria-hidden="true">MM</div>
-            <figcaption class="portrait__note">Placeholder — add professional portrait</figcaption>
+            <img src="profile.png" alt="Mohamed Mahmoud Abd Alftah — Senior Android Engineer" width="768" height="1024" loading="eager" decoding="async" />
           </figure>
           <div class="code-card tilt-card reveal" id="codeCard">
             <div class="code-card__bar" aria-hidden="true"><i></i><i></i><i></i><span>PAYMENT_ENGINE.kt</span></div>
@@ -1745,7 +1753,9 @@
 }</code></pre>
           </div>
           <div class="avatar-card reveal">
-            <div class="avatar" aria-hidden="true">MM</div>
+            <div class="avatar">
+              <img src="profile.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </div>
             <div class="avatar-card__meta">
               <strong>Senior Android &amp; POS Engineer</strong>
               <span>Cairo · Remote &amp; EU relocation</span>
